@@ -1,7 +1,7 @@
 const { ethers} = require("ethers"); 
 
 
-const provider = new ethers.providers.JsonRpcProvider(`https://mainnet.infura.io/v3/4f26b6e629fe4494b514488881dccb5a`);
+const provider = new ethers.providers.JsonRpcProvider(`https://mainnet.infura.io/v3/${YOUR_API_KEY}`);
 
 async function fetchData(blockNumber) { 
     try {
