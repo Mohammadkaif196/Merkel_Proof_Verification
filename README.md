@@ -1,70 +1,86 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Merkle Proof Verification of Blockchain Transactions
 
-## Available Scripts
+### Task OverView
 
-In the project directory, you can run:
+ In this task, we implement a system to verify the presence of a blockchain transaction within a block using Merkle proofs. This system will allow users to confirm whether a transaction is part of a Merkle tree built from the block's transactions. The project works on Sepolia testnet, where the smart contract stores the Merkle root of the block and verifies transactions through Merkle proofs.
 
-### `npm start`
+ ## Merkel tree
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ A Merkle Tree is a tree structure where each leaf node is a cryptographic hash of its underlying data and each non-leaf node is a hash of its direct descendants. Typically, Merkle trees have a branching factor of two, meaning that each node has up to two children. At the top of each tree is the root hash which changes each time a new leaf node is added to the tree.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ ## Merkel proof
+  A Merkle proof is a sequence of hashes that allows you to verify that a specific transaction is part of the Merkle tree. This proof can be provided along with the transaction hash to verify its inclusion.
 
-### `npm test`
+  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Frontend
+   - Reactjs
+   - Tailwind css
+- Backend
+  - Solidity
 
-### `npm run eject`
+  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## How to Run the Task
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To run this task on your local machine, follow these steps:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Clone the repository
+```bash
+  git clone https://github.com/Mohammadkaif196/charter--21bce9443-
+```
+Install the dependencies
+```bash
+   npm install
+```
+Go to the util folder and open fetchData file and write your api key their
+```bash
+ const provider = new ethers.providers.JsonRpcProvider(`https://mainnet.infura.io/v3/${YOUR_API_KEY}`);
+```
+Now the task using command
+```bash
+    npm start
+```
+The project should now be running on your localhost. Access it by visiting http://localhost:3000 in your web browser.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Images of the Task
+Initial interface of the Task looks like this:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![App Screenshot](https://github.com/Mohammadkaif196/charter--21bce9443-/blob/main/src/images/pic1.png)
 
-### Code Splitting
+Enter the blockNumber and click on the button,then metamask will open,you need pay fee for that,after confirm that you will  get the list of transactions in that particular block
+as shown below:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![App Screenshot](https://github.com/Mohammadkaif196/charter--21bce9443-/blob/main/src/images/pic2.png)
 
-### Analyzing the Bundle Size
+Enter the hash of transaction to verify.If it is present in that block then it will show you valid as show below:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![App Screenshot](https://github.com/Mohammadkaif196/charter--21bce9443-/blob/main/src/images/pic3.png?raw=true)
 
-### Making a Progressive Web App
+If transaction is not present in that block you will get invalid
+as shown below:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![App Screenshot](https://github.com/Mohammadkaif196/charter--21bce9443-/blob/main/src/images/pic3.png?raw=true)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Author
+
+Shaik Mohammad Kaif
+
+LinkedIn - [https://www.linkedin.com/in/shaik-mohammad-kaif196](https://www.linkedin.com/in/shaik-mohammad-kaif196);
+
+Github - [https://github.com/Mohammadkaif196](https://github.com/Mohammadkaif196)
+
